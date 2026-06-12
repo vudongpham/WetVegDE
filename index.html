@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    WetVegDE 1985-2024
+  </title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1 >
+            WetVegDE - Four decades (1984 - 2025) wetland vegetation maps of Germany |
+            Download dataset: <a href="#" style="color: #00ffff;">Zenodo</a>
+    </h1>
+  </header>
+
+  <main class="map-wrapper">
+    <div class="map-controls">
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="layer" value="2024" checked />
+        Map 2024
+        </label>
+        <label>
+        <input type="radio" name="layer" value="2021" />
+        Map 2021
+        </label>
+        <label>
+        <input type="radio" name="layer" value="2018" />
+        Map 2018
+        </label>
+        <label>
+        <input type="radio" name="layer" value="2015" />
+        Map 2015
+        </label>
+        <label>
+        <input type="radio" name="layer" value="2012" />
+        Map 2012
+        </label>
+        <label>
+        <input type="radio" name="layer" value="2009" />
+        Map 2009
+        </label>
+        <label>
+        <input type="radio" name="layer" value="2006" />
+        Map 2006
+        </label>
+        <label>
+        <input type="radio" name="layer" value="2003" />
+        Map 2003
+        </label>
+        <label>
+        <input type="radio" name="layer" value="2000" />
+        Map 2000
+        </label>
+        <label>
+        <input type="radio" name="layer" value="1997" />
+        Map 1997
+        </label>
+        <label>
+        <input type="radio" name="layer" value="1994" />
+        Map 1994
+        </label>
+        <label>
+        <input type="radio" name="layer" value="1991" />
+        Map 1991
+        </label>
+        <label>
+        <input type="radio" name="layer" value="1988" />
+        Map 1988
+        </label>
+        <label>
+        <input type="radio" name="layer" value="1985" />
+        Map 1985
+        </label>
+
+    </div>
+
+    <div class="slider-group">
+      <label for="map-slider">Map opacity: <span id="slider-value">100</span>%</label>
+      <input
+        id="map-slider"
+        type="range"
+        min="0"
+        max="100"
+        value="100"
+      />
+    </div>
+  </div>
+  <div class="map-legend">
+        <div class="legend-title">Legend</div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(220,220,220);"></span>
+            <span class="legend-label">Other land covers</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(143,158,0);"></span>
+            <span class="legend-label">Grassland</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(0,150,0);"></span>
+            <span class="legend-label">Forest</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(0,0,255);"></span>
+            <span class="legend-label">Water</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(111,244,230);"></span>
+            <span class="legend-label">Open swamp</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(82,195,220);"></span>
+            <span class="legend-label">Salt marsh</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(213,94,0);"></span>
+            <span class="legend-label">Cut-over raised bog</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(204,121,167);"></span>
+            <span class="legend-label">Natural or restored raised bog</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color" style="background: rgb(240,228,66);"></span>
+            <span class="legend-label">Natural or restored fen</span>
+        </div>
+    </div>
+    <div id="map"></div>
+  </main>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Custom JS -->
+  <script src="./map.js"></script>
+</body>
+</html>
